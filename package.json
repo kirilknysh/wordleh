@@ -2,7 +2,12 @@
   "name": "wordleh",
   "version": "1.0.0",
   "description": "Wordle helper",
-  "keywords": ["wordle", "words", "dictionary", "game"],
+  "keywords": [
+    "wordle",
+    "words",
+    "dictionary",
+    "game"
+  ],
   "main": "index.mjs",
   "scripts": {
     "start": "node index.mjs",
@@ -22,5 +27,8 @@
   },
   "dependencies": {
     "an-array-of-english-words": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.7.0"
   }
 }
