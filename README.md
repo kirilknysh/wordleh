@@ -1,2 +1,2 @@
 # wordleh
-Wordle helper https://www.powerlanguage.co.uk/wordle/
+[Wordle](https://www.powerlanguage.co.uk/wordle/) helper.
