@@ -65,14 +65,19 @@ Use one of these words:
 8. Enter `shire` -> 🟩🟩🟩🟩🟩
 
 ## Results
-```
+<table>
+  <tr valign="top">
+    <td>
+      <pre>
 Wordle 212 4/6
 ⬛️🟨⬛️🟨🟩
 🟩⬛️🟨⬛️🟩
 🟩⬛️🟩🟩🟩
 🟩🟩🟩🟩🟩
-```
-```
+      </pre>
+    </td>
+    <td>
+      <pre>
 Wordle 213 6/6
 ⬛️🟩🟩⬛️⬛️
 ⬛️🟩🟩⬛️⬛️
@@ -80,4 +85,24 @@ Wordle 213 6/6
 ⬛️🟩🟩⬛️⬛️
 ⬛️🟩🟩⬛️🟩
 🟩🟩🟩🟩🟩
-```
+      </pre>
+    </td>
+    <td>
+      <pre>
+Wordle 214
+      </pre>
+    </td>
+    <td>
+      <pre>
+Wordle 215
+      </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <pre>
+Wordle 216
+      </pre>
+    </td>
+  </tr>
+</table>
