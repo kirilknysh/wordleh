@@ -30,11 +30,12 @@ function main(args, dictionary) {
   const letters = buildLetters(words);
 
   const possibles = findPossibles(words, config, letters);
+  console.log(words.length, 'words potentially correct.');
   console.log('Use one of these words:');
-  console.log(`  ${possibles.slice(0, 5).join(' , ')}`);
-  if (config.explicit) {
+  console.log(`  ${possibles.join(' , ')}`);
+  if (config.verbose) {
     console.log('Full list of possible words:');
-    console.log(`  ${possibles.join(' , ')}`);
+    console.log(`  ${words.join(' , ')}`);
   }
 }
 

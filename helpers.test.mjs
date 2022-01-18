@@ -7,7 +7,7 @@ describe('helpers', () => {
     it('should return default config', () => {
       assert.deepEqual(
         helpers.parseConfig(['0']),
-        { size: 0, explicit: false, must: [], not: [], exclude: [] }
+        { size: 0, verbose: false, must: [], not: [], exclude: [] }
       );
     });
 
@@ -21,8 +21,8 @@ describe('helpers', () => {
       });
     });
 
-    it('should parse `explicit` argument', () => {
-      assert.deepEqual(helpers.parseConfig(['3', '-e']).explicit, true);
+    it('should parse `verbose` argument', () => {
+      assert.deepEqual(helpers.parseConfig(['3', '-v']).verbose, true);
     });
 
     it('should throw when argument is formatted incorrectly', () => {
@@ -45,7 +45,7 @@ describe('helpers', () => {
 
     it('should parse multiple `must` arguments', () => {
       assert.deepEqual(
-        helpers.parseConfig(['5', '-e', 'a3', 'b2', 'a4']).must,
+        helpers.parseConfig(['5', '-v', 'a3', 'b2', 'a4']).must,
         [{ letter: 'a', position: 3 }, { letter: 'b', position: 2 }, { letter: 'a', position: 4 }]
       );
     });
@@ -82,7 +82,7 @@ describe('helpers', () => {
   describe('findPossibles', () => {
     it('should find the words that consist of the most popular letters', () => {
       const words = ['abc', 'abb', 'bbb', 'qwa', 'sde', 'gcp', 'bac'];
-      const config = { size: 3, explicit: false, must: [], not: [], exclude: [] };
+      const config = { size: 3, verbose: false, must: [], not: [], exclude: [] };
       const letters = helpers.buildLetters(words);
 
       assert.deepEqual(
@@ -93,10 +93,8 @@ describe('helpers', () => {
 
     it('should skip some (even popular) letters', () => {
       const words = ['bbc', 'jbb', 'bbb', 'qwa', 'saa', 'gca'];
-      const config = { size: 3, explicit: false, must: [], not: [], exclude: [] };
+      const config = { size: 3, verbose: false, must: [], not: [], exclude: [] };
       const letters = helpers.buildLetters(words);
-
-      console.log(letters);
 
       assert.deepEqual(
         helpers.findPossibles(words, config, letters),

@@ -4,8 +4,9 @@ export function printHelp() {
   console.log('Wordle helper utility.');
   console.log('Usage examples:');
   console.log('  `wordleh 5` - shows the best initial word with the given length (5 letters here).');
-  console.log('  `wordleh 5 a0 b2 c! d! e1!` - shows the next word recommendation when some letter already known:');
+  console.log('  `wordleh 5 -v a0 b2 c! d! e1!` - shows the next word recommendation when some letter already known:');
   console.log('    `5` - word length;');
+  console.log('    `-v` - optional; shows, together with the recommendation, the full list of possible words');
   console.log('    `a0 b2` - letter `a` MUST exist in the word at position 0, letter `b` MUST be at position 2; position MUST be smaller than the word length;');
   console.log('    `c! d!` - letters `c` and `d` MUST NOT be in the word in any position;');
   console.log('    `e1!` - letters `e` MUST be in the word but MUST NOT be the second;');
@@ -23,8 +24,8 @@ export function parseConfig(args) {
       return config;
     }
 
-    if (arg === '-e') {
-      config.explicit = true;
+    if (arg === '-v') {
+      config.verbose = true;
       return config;
     }
 
@@ -58,7 +59,7 @@ export function parseConfig(args) {
     }
 
     return config;
-  }, { size: 0, explicit: false, must: [], not: [], exclude: [] });
+  }, { size: 0, verbose: false, must: [], not: [], exclude: [] });
 }
 
 export function buildLetters(words) {
