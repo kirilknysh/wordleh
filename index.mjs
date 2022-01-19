@@ -3,7 +3,7 @@
 import { createRequire } from 'module';
 import { argv, exit } from 'process';
 
-import { buildLetters, findPossibles, parseConfig, printHelp } from './helpers.mjs';
+import { buildLetters, filterDictionary, findPossibles, parseConfig, printHelp } from './helpers.mjs';
 
 const require = createRequire(import.meta.url);
 const dictionary = require('an-array-of-english-words');
@@ -20,13 +20,7 @@ function main(args, dictionary) {
   }
 
   const config = parseConfig(args);
-
-  const words = dictionary.filter((word) => {
-    return word.length === config.size &&
-      config.must.every(({ letter, position }) => word[position] === letter) &&
-      config.not.every(({ letter }) => !word.includes(letter)) &&
-      config.exclude.every(({ letter, position }) => word.includes(letter) && word[position] !== letter);
-  });
+  const words = filterDictionary(dictionary, config);
   const letters = buildLetters(words);
 
   const possibles = findPossibles(words, config, letters);

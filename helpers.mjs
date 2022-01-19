@@ -1,4 +1,4 @@
-const ARG_REGEX = /(?<letter>[a-z]+)(?<position>[0-9]*)(?<negation>[!]*)/i;
+const ARG_REGEX = /^(?<letter>[a-z]+)(?<position>[0-9]*)(?<negation>[!]*)$/i;
 
 export function printHelp() {
   console.log('Wordle helper utility.');
@@ -41,35 +41,42 @@ export function parseConfig(args) {
     let position = -1;
     if (execArray[2].length > 0) {
       position = +execArray[2];
-      if (!Number.isFinite(position) || position >= config.size) {
-        throw new Error(`Invalid argument \`${arg}\`. Use \`wordleh -h\` for help.`);
+      if (!Number.isFinite(position)) {
+        throw new Error(`Invalid argument \`${arg}\`. Letter position must be a positive number. Use \`wordleh -h\` for help.`);
+      }
+      if (position >= config.size) {
+        throw new Error(`Invalid argument \`${arg}\`. Letter position cannot be bigger that word size. Use \`wordleh -h\` for help.`);
       }
     }
     const negation = execArray[3] === '!';
 
-    if (!negation) { // a0
-      if (position < 0) {
-        throw new Error(`Invalid argument \`${arg}\`. Use \`wordleh -h\` for help.`);
-      }
+    if (!negation && position >= 0) { // a0
       config.must.push({ letter, position });
-    } else if (position < 0) { // c!
-      config.not.push({ letter });
-    } else { // e1!
+    } else if (negation && position >= 0) { // e1!
       config.exclude.push({ letter, position });
+    } else if (negation && position < 0) { // c!
+      config.not.push({ letter });
+    } else {
+      throw new Error(`Invalid argument \`${arg}\`. Use \`wordleh -h\` for help.`);
     }
 
     return config;
   }, { size: 0, verbose: false, must: [], not: [], exclude: [] });
 }
 
+export function filterDictionary(dictionary, config) {
+  return dictionary.filter((word) => {
+    return word.length === config.size &&
+      config.must.every(({ letter, position }) => word[position] === letter) &&
+      config.not.every(({ letter }) => !word.includes(letter)) &&
+      config.exclude.every(({ letter, position }) => word.includes(letter) && word[position] !== letter);
+  });
+}
+
 export function buildLetters(words) {
   const hash = words.reduce((hash, word) => {
     [...word].forEach((letter) => {
-      if (hash[letter]) {
-        hash[letter] += 1;
-      } else {
-        hash[letter] = 1;
-      }
+      hash[letter] = (hash[letter] ?? 0) + 1;
     });
     return hash;
   }, Object.create(null));

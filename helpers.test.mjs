@@ -29,6 +29,12 @@ describe('helpers', () => {
       assert.throws(() => {
         helpers.parseConfig(['4', '=']);
       });
+      assert.throws(() => {
+        helpers.parseConfig(['4', 'a-1']);
+      });
+      assert.throws(() => {
+        helpers.parseConfig(['4', 'b@']);
+      });
     });
 
     it('should throw when argument position is incorrect', () => {
@@ -61,6 +67,24 @@ describe('helpers', () => {
       assert.deepEqual(
         helpers.parseConfig(['5', 'h2!', 'a3', 'm4!']).exclude,
         [{ letter: 'h', position: 2 }, { letter: 'm', position: 4 }]
+      );
+    });
+  });
+
+  describe('filterDictionary', () => {
+    it('should return only words that match the config', () => {
+      const dictionary = ['size5', 'si3', 'pick', 'pink', 'kips'];
+      const config = {
+        size: 4, // size5, si3
+        verbose: false,
+        must: [{ letter: 'i', position: 1 }],
+        not: [{ letter: 'n' }], // pink
+        exclude: [{ letter: 'k', position: 2 }],
+      };
+
+      assert.deepEqual(
+        helpers.filterDictionary(dictionary, config),
+        ['pick', 'kips']
       );
     });
   });
