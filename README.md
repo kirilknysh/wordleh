@@ -7,6 +7,11 @@ The easiest is to use `npm exec` command:
 npm exec github:kirilknysh/wordleh -h
 ```
 
+If the previous version is already installed, clean cache with:
+```sh
+npm exec clear-npx-cache
+```
+
 ## Real life example
 1. Get initial word with length 5:
 ```sh
