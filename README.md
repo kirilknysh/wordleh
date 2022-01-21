@@ -110,7 +110,7 @@ Wordle 215 3/6
       </pre>
     </td>
   </tr>
-  <tr>
+  <tr valign="top">
     <td>
       <pre>
 Wordle 216 4/6
