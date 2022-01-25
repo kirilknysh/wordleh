@@ -154,7 +154,6 @@ Wordle 220 3/6
 🟨🟨⬛🟨⬛
 🟩⬛🟨⬛🟩
 🟩🟩🟩🟩🟩
-
       </pre>
     </td>
     <td>
@@ -170,6 +169,28 @@ Wordle 222
     <td>
       <pre>
 Wordle 223
+      </pre>
+    </td>
+  </tr>
+  <tr valign="top">
+    <td>
+      <pre>
+Wordle 224
+      </pre>
+    </td>
+    <td>
+      <pre>
+Wordle 225
+      </pre>
+    </td>
+    <td>
+      <pre>
+Wordle 226
+      </pre>
+    </td>
+    <td>
+      <pre>
+Wordle 227
       </pre>
     </td>
   </tr>
