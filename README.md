@@ -176,7 +176,10 @@ Wordle 222 3/6
     </td>
     <td>
       <pre>
-Wordle 223
+Wordle 223 3/6
+⬛🟨⬛⬛🟨
+⬛⬛🟩🟨⬛
+🟩🟩🟩🟩🟩
       </pre>
     </td>
   </tr>
