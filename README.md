@@ -4,7 +4,7 @@
 ## Usage
 The easiest is to use `npm exec` command:
 ```sh
-npm exec github:kirilknysh/wordleh -h
+npm exec github:kirilknysh/wordleh -- -h
 ```
 
 If the previous version is already installed, clean cache with:

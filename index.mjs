@@ -30,6 +30,8 @@ function main(args, dictionary) {
   if (config.verbose) {
     console.log('Full list of possible words:');
     console.log(`  ${words.join(' , ')}`);
+  } else {
+    console.log('Tip! Add `-v` argument to see the full list of possible words.');
   }
 }
 
