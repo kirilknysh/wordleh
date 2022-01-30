@@ -195,7 +195,11 @@ Wordle 224 4/6
     </td>
     <td>
       <pre>
-Wordle 225
+Wordle 225 4/6
+⬛🟩⬛⬛⬛
+⬛🟩🟩⬛⬛
+⬛🟩🟩🟩⬛
+🟩🟩🟩🟩🟩
       </pre>
     </td>
     <td>
