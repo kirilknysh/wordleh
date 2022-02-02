@@ -225,7 +225,11 @@ Wordle 227 4/6
   <tr valign="top">
     <td>
       <pre>
-Wordle 228
+Wordle 228 4/6
+⬛⬛🟨🟩⬛
+🟨🟩⬛🟩⬛
+⬛🟩🟩🟩🟩
+🟩🟩🟩🟩🟩
       </pre>
     </td>
     <td>
