@@ -294,4 +294,48 @@ Wordle 235
       </pre>
     </td>
   </tr>
+  <tr valign="top">
+    <td>
+      <pre>
+Wordle 236
+      </pre>
+    </td>
+    <td>
+      <pre>
+Wordle 237
+      </pre>
+    </td>
+    <td>
+      <pre>
+Wordle 238
+      </pre>
+    </td>
+    <td>
+      <pre>
+Wordle 239
+      </pre>
+    </td>
+  </tr>
+  <tr valign="top">
+    <td>
+      <pre>
+Wordle 240
+      </pre>
+    </td>
+    <td>
+      <pre>
+Wordle 241
+      </pre>
+    </td>
+    <td>
+      <pre>
+Wordle 242
+      </pre>
+    </td>
+    <td>
+      <pre>
+Wordle 243
+      </pre>
+    </td>
+  </tr>
 </table>
