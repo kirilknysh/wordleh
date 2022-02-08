@@ -285,7 +285,11 @@ Wordle 233 5/6
     </td>
     <td>
       <pre>
-Wordle 234
+Wordle 234 4/6
+🟨🟩⬛⬛🟩
+⬛🟩🟩⬛🟩
+⬛🟩🟩🟩🟩
+🟩🟩🟩🟩🟩
       </pre>
     </td>
     <td>
