@@ -294,7 +294,10 @@ Wordle 234 4/6
     </td>
     <td>
       <pre>
-Wordle 235
+Wordle 235 3/6
+⬛🟨🟨⬛⬛
+⬛🟨🟨🟨⬛
+🟩🟩🟩🟩🟩
       </pre>
     </td>
   </tr>
