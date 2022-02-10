@@ -304,7 +304,10 @@ Wordle 235 3/6
   <tr valign="top">
     <td>
       <pre>
-Wordle 236
+Wordle 236 3/6
+🟨⬛⬛🟩🟩
+⬛🟩🟩🟩🟩
+🟩🟩🟩🟩🟩
       </pre>
     </td>
     <td>
