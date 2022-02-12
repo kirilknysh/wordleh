@@ -321,7 +321,10 @@ Wordle 237 4/6
     </td>
     <td>
       <pre>
-Wordle 238
+Wordle 238 3/6
+🟨🟨⬛⬛⬛
+🟨🟨⬛🟩⬛
+🟩🟩🟩🟩🟩
       </pre>
     </td>
     <td>
