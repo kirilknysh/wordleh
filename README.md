@@ -341,7 +341,11 @@ Wordle 239 5/6
   <tr valign="top">
     <td>
       <pre>
-Wordle 240
+Wordle 240 4/6*
+⬛⬛⬛⬛⬛
+⬛🟨🟨⬛🟨
+⬛🟨🟩🟨⬛
+🟩🟩🟩🟩🟩
       </pre>
     </td>
     <td>
