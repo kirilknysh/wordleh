@@ -350,7 +350,9 @@ Wordle 240 4/6*
     </td>
     <td>
       <pre>
-Wordle 241
+Wordle 241 2/6*
+🟩🟩🟩⬛⬛
+🟩🟩🟩🟩🟩
       </pre>
     </td>
     <td>
